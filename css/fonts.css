@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'assesso';
+  src: url('../fonts/assesso.eot?30967368');
+  src: url('../fonts/assesso.eot?30967368#iefix') format('embedded-opentype'),
+       url('../fonts/assesso.woff?30967368') format('woff'),
+       url('../fonts/assesso.ttf?30967368') format('truetype'),
+       url('../fonts/assesso.svg?30967368#assesso') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400);
+@font-face{font-family:"Roboto";src:url("../fonts/Roboto-Regular.ttf") format("truetype");}
+
+@font-face{font-family: "Exo"; src:url("../fonts/Exo-Regular.otf");}
+
+@font-face{font-family: "Nova Light"; src:url("../fonts/Nova-Light.otf");}
+
+@font-face{font-family:"Source";src:url(../fonts/SourceSansPro-Regular.ttf) format ("truetype");}
+@font-face{font-family:"SourceBold";src:url(../fonts/SourceSansPro-Semibold.ttf) format ("truetype");}
+
+@font-face{font-family: "Lato";src:url("../fonts/Lato-Regular.ttf") format("truetype");}
+
+@font-face{font-family:"Open Sans";src:url("../fonts/Open-Sans-Regular.ttf") format("truetype");}
+
+@font-face{font-family:"PT Serif";src:url("../fonts/PT-Serif.ttf") format("truetype");}
+
+@font-face{font-family: "Oswald"; src: url("../fonts/Oswald-Regular.ttf") format("truetype");}
+
+@font-face{font-family: "Dosis";src: url("../fonts/Dosis-Regular.ttf") format("truetype");}
+
+@font-face{font-family: "Fjalla";src: url("../fonts/FjallaOne-Regular.ttf") format("truetype");}
+@font-face{font-family: "Bebasrs" ;src: url(../fonts/BebasNeue.otf);}
+
+@font-face {
+  font-family: 'icones';
+  src: url('../font/icones.eot?8447565');
+  src: url('../font/icones.eot?8447565#iefix') format('embedded-opentype'),
+       url('../font/icones.woff?8447565') format('woff'),
+       url('../font/icones.ttf?8447565') format('truetype'),
+       url('../font/icones.svg?8447565#icones') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
