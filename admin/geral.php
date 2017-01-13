@@ -6,7 +6,7 @@ include("inc/header.php");
 <div class="menu-lateral col-md-3">
     <h3><i class='glyphicon glyphicon-wrench'></i> Fórum</h3>
     <ul>
-        <a href="<?= $url;?>admin/geral.php?opcao=configForum"><li>Configuração</li></a>
+        <a href="<?= $url;?>admin/geral.php?opcao=config"><li>Configuração</li></a>
         <a href="<?= $url;?>admin/geral.php?opcao=categorias"><li>Categorias e áreas</li></a>
         <a href="<?= $url;?>admin/geral.php?opcao=seguranca"><li>Segurança</li></a>
         <a href="<?= $url;?>admin/geral.php?opcao=cancelamento"><li>Cancelamento do fórum</li></a>
@@ -39,8 +39,8 @@ include("inc/header.php");
 
 <div class="conteudo col-md-9">
     <?php
-        if(isset($_GET['opcao']) && $_GET['opcao'] == "configForum"){
-            include("geral/configForum.php");
+        if(isset($_GET['opcao']) && $_GET['opcao'] == "config"){
+            include("geral/config.php");
         } elseif(isset($_GET['opcao']) && $_GET['opcao'] == "categorias"){
             include("geral/categorias.php");
         } elseif(isset($_GET['opcao']) && $_GET['opcao'] == "seguranca"){
@@ -61,9 +61,44 @@ include("inc/header.php");
             include("geral/anexos.php");
         }else{
     ?>
+    
     <h1><i class='glyphicon glyphicon-tint'></i> Geral</h1>
     <p>Nesta aba, você poderá administrar todas as <strong>opções gerais</strong> do seu fórum. Configure o seu fórum de acordo com seus próprios parâmetros e objetivos. Informe seus usuários enviando newsletters ou dialogando diretamente com os membros do seu fórum.  </p>
     <br><br>
+    
+        <div class="col-md-12">
+        <fieldset>
+            <legend>Geral</legend>
+            <table class="tabela table table-bordered table-striped">
+                <tr>
+                    <th>Estatísticas</th>
+                    <th>Valor</th>
+                    <th>Estatísticas</th>
+                    <th>Valor</th>
+                </tr>
+                <tr>
+                    <td>Número de ações administração</td>
+                    <td>6000</td>
+                    <td>Número de categorias</td>
+                    <td>6000</td>
+                </tr>
+                <tr>
+                    <td>Número de ações moderação</td>
+                    <td>6000</td>
+                    <td>Número de áreas</td>
+                    <td>6000</td>
+                </tr>
+                <tr>
+                    <td>Número de palavras censuradas</td>
+                    <td>6000</td>
+                    <td>Mensagens</td>
+                    <td>6000</td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+    
+    
      <div class="col-md-6">
         <fieldset>
             <legend>Categorias</legend>
@@ -128,37 +163,7 @@ include("inc/header.php");
         </fieldset>
     </div> 
     
-    <div class="col-md-12">
-        <fieldset>
-            <legend>Geral</legend>
-            <table class="tabela table table-bordered table-striped">
-                <tr>
-                    <th>Estatísticas</th>
-                    <th>Valor</th>
-                    <th>Estatísticas</th>
-                    <th>Valor</th>
-                </tr>
-                <tr>
-                    <td>Número de ações administração</td>
-                    <td>6000</td>
-                    <td>Número de categorias</td>
-                    <td>6000</td>
-                </tr>
-                <tr>
-                    <td>Número de ações moderação</td>
-                    <td>6000</td>
-                    <td>Número de áreas</td>
-                    <td>6000</td>
-                </tr>
-                <tr>
-                    <td>Número de palavras censuradas</td>
-                    <td>6000</td>
-                    <td>Mensagens</td>
-                    <td>6000</td>
-                </tr>
-            </table>
-        </fieldset>
-    </div>
+
         <?php 
         
         }?>

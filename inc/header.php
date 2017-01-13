@@ -2,15 +2,21 @@
 session_start();
 include("modals.php");
 include("funcoes.php");
-
-
 $path = $_SERVER['DOCUMENT_ROOT'];
 $path .= "/forum/config.php";
 include_once($path);
-
 $ativarDebugador = 0; // 0 para desativar | 1 para ativar
-
 $sqlWidgets = mysqli_query($conexao, "SELECT tituloWidget, conteudoWidget FROM widget");
+
+// Selecionar configuracoes
+$sqlConfig = mysqli_query($conexao, "SELECT * FROM configuracoes");
+while($r = mysqli_fetch_array($sqlConfig)){
+    $nomeForum = $r['nome'];
+    $favicon = $r['favicon'];
+    $idioma = $r['idioma'];
+    $descForum = $r['descricao'];
+}
+
 
 if (isset($_SESSION['usuarioLogado'])) {
     $usuario = $_SESSION['usuarioLogado'];
@@ -29,16 +35,16 @@ if ($ativarDebugador == 1) {
     endforeach;
 }
 
+$htmlLang = ($idioma == 'portugues') ? 'pt-br' : 'en';
 ?>
-
 <!DOCTYPE HTML>
-<html lang="pt-br">
+<html lang="<?= $htmlLang;?>">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>AMD - Fórum</title>
-        <link rel="icon" href="<?= $url; ?>img/favicon.png" type="image/x-icon">
+        <title><?= $nomeForum; ?></title>
+        <link rel="icon" href="<?= $favicon; ?>" type="image/x-icon">
         <link rel="stylesheet" href="<?= $url; ?>css/bootstrap.min.css">
         <link rel="stylesheet" href="<?= $url; ?>css/estilo.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -57,10 +63,20 @@ if ($ativarDebugador == 1) {
                     <div class="form-busca right">
                         <form id="formBusca" name="formBusca" method="GET" action="<?= $url; ?>busca.php">
                             <div class="left form-group">
-                                <input type="text" class="form-control" id="txtPesquisa" name="pesquisa" placeholder="O que você procura?">
+                                <input type="text" class="form-control" id="txtPesquisa" name="pesquisa" placeholder="<?php 
+                                    if($idioma == 'portugues'){ 
+                                        echo "O que você procura?";
+                                    } else{ 
+                                        echo 'What are you looking for?';} ?>">
                             </div>
                             <div class="right">
-                                <button id="btnBuscar" type="submit" class="btnBuscar btn btn-danger">Buscar</button>
+                                <button id="btnBuscar" type="submit" class="btnBuscar btn btn-danger">
+                                    <?php
+                                        if($idioma == 'portugues'){ 
+                                            echo "Buscar";
+                                        } else{ 
+                                            echo 'Search';} ?>
+                                </button>
                             </div>
                         </form>
                     </div>

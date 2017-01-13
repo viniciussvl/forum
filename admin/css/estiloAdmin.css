@@ -38,6 +38,7 @@ body{font-family: "Open Sans";}
 /* TOPO */
 .right{float: right;}
 .left{float: left;}
+.titulo{font-family: "Dosis";}
 .barra-topo{padding: 10px;}
 .barra-topo img{padding: 0 10px;}
 .barra-topo h1{font-size: 2em; display: inline-block; padding: 0 20px;}
@@ -65,7 +66,7 @@ span{color: #009966;}
 
 
 /* Fieldset */
-fieldset{padding: 10px 20px; background-color: whitesmoke; border: 1px solid #e3e3e3; border-radius: 3px;-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05); box-shadow: inset 0 1px 1px rgba(0,0,0,0.05); color: #a3aaae;font-size: 0.9em;position: relative; margin: 0 0 20px 0;}
+fieldset{padding: 10px 20px; background-color: whitesmoke; border: 1px solid #e3e3e3; border-radius: 3px;-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05); box-shadow: inset 0 1px 1px rgba(0,0,0,0.05); color: #666666;font-size: 1em;position: relative; margin: 0 0 20px 0;}
 legend{font-weight: bold; color: #009966 !important; padding: 1px 0;font-size: 1.3em;font-weight: bold;color: #369fcf;line-height: 100%;display: block; border: 0; margin-left: -10px;}
 
 
@@ -81,6 +82,9 @@ td{color: #4f4f4f;}
 .table>tbody>tr>td{border: 1px solid #ddd;}
 
 
+/* Categorias */
+.table i{font-size: 1.3em;}
+
 
 /* Formularios */
 input{padding: 8px 0; border-radius: 3px; border: 1px solid #ddd;}
@@ -95,3 +99,8 @@ input{padding: 8px 0; border-radius: 3px; border: 1px solid #ddd;}
 .btn-danger:hover{background: #266d40; opacity: 0.8;}
 a.btn-new{color: #84c754; transition: 0.5s; font-size: 2em; margin: 8px 0; cursor: pointer;}
 a.btn-new:hover{color: #84c754;}
+
+
+/* Icones */
+.editar{color: #e6ad1d;}
+.remover{color: #e9553c;}

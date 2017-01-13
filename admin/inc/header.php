@@ -25,7 +25,7 @@ if (!isset($_SESSION['usuarioLogado']) || $_SESSION['verificaAdmin'] != 1) {
     <body>
         <header id="topo">
             <div class="barra-topo">
-                <img src="<?= $url; ?>img/favicon.png"><h1>Painel de Controle</h1>
+                <img src="<?= $url; ?>img/favicon.png"><h1 class="titulo">Painel de Controle</h1>
                 <a href="<?= $url; ?>" class="right" target="_blank">Ver fórum</a>
             </div>
             <nav class="navbar navbar-default">

@@ -32,17 +32,6 @@
 @font-face{font-family: "Fjalla";src: url("../fonts/FjallaOne-Regular.ttf") format("truetype");}
 @font-face{font-family: "Bebasrs" ;src: url(../fonts/BebasNeue.otf);}
 
-@font-face {
-    font-family: 'icones';
-    src: url('../fonts/icones.eot?8447565');
-    src: url('../fontsicones.eot?8447565#iefix') format('embedded-opentype'),
-        url('../fonts/icones.woff?8447565') format('woff'),
-        url('../fonts/icones.ttf?8447565') format('truetype'),
-        url('../fonts/icones.svg?8447565#icones') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 @import url('https://fonts.googleapis.com/css?family=Oxygen');
 
 /* Botão de Voltar ao Topo */
@@ -133,8 +122,9 @@ h4{text-align: center;}
 .separador{border: 1px solid #ddd; margin: 20px 0;}
 .botoes-editar-topico{ margin: 200px 0 0 0;}
 
-
-
+/* Moderação */
+.menu-moderacao{padding: 0 10px;}
+.menu-moderacao i{font-size: 2.3em;}
 
 /* Criação de um Tópico */
 .novoTopico{border: 1px solid #eee; padding: 10px 30px; background: #fff;}
